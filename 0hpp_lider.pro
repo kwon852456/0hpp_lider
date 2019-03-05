@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui charts
+QT       += core gui serialport charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -33,6 +33,11 @@ HEADERS += \
 
 FORMS += \
         mainwindow.ui
+
+
+INCLUDEPATH += R:\dev\release\0hpp
+
+LIBS += -lws2_32 -luser32
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
